@@ -1,6 +1,9 @@
 public class Tester {
   public static void main (String [] args) {
     SuperArray arr = new SuperArray();
+    System.out.println(arr.isEmpty());
+    System.out.println();
+//
     System.out.println(arr.add("does"));
     System.out.println(arr.add("this"));
     System.out.println(arr.add("work"));
@@ -39,5 +42,10 @@ public class Tester {
     System.out.println(arr.get(9));
     System.out.println(arr.get(10));
     System.out.println(arr.get(11));
+    System.out.println();
+//
+    System.out.println(arr.isEmpty());
+//
+    System.out.println(arr.toString());
   }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SuperArray {
   private String [] data;
   private int size;
@@ -41,10 +43,35 @@ public class SuperArray {
   }
 
   private void resize () {
-    String [] newData = new String [data.length + 10];
+    String [] newData = new String [data.length * 2];
     for (int i = 0; i < data.length; i++) {
       newData[i] = data[i];
     }
     data = newData;
+  }
+
+  public boolean isEmpty () {
+    boolean bool = true;
+    for (int i = 0; i < data.length; i++) {
+      bool = bool && (data[i] == null);
+    }
+    return bool;
+  }
+
+  public String toString () {
+    String str = "[";
+    boolean first = true;
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] != null) {
+        if (first == true) {
+          str = str + data[i];
+          first = false;
+        } else {
+          str = str + ", " + data[i];
+        }
+      }
+    }
+    str = str + "]";
+    return str;
   }
 }
