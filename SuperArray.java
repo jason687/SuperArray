@@ -1,11 +1,13 @@
-import java.util.Arrays;
-
 public class SuperArray {
   private String [] data;
   private int size;
 
   public SuperArray () {
     data = new String [10];
+  }
+
+  public SuperArray (int initialCapacity) {
+    data = new String [initialCapacity];
   }
 
   public int size () {
@@ -26,6 +28,7 @@ public class SuperArray {
       }
       if (data[i] == null) {
         data[i] = element;
+        size += 1;
         return true;
       }
     }
@@ -73,5 +76,36 @@ public class SuperArray {
     }
     str = str + "]";
     return str;
+  }
+
+  public boolean contains (String s) {
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] != null) {
+        if (s.equals(data[i])) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  public void add (int index, String element) {
+    String temp1 = "";
+    String temp2 = element;
+    boolean complete = false;
+    for (int i = index; i < data.length; i++) {
+      if (!complete && i == data.length - 1 && data[i] != null) {
+        resize();
+      }
+      if (data[i] != null) {
+        temp1 = data[i];
+        data[i] = temp2;
+        temp2 = temp1;
+      } else {
+        data[i] = temp2;
+        i = data.length;
+        complete = true;
+      }
+    }
   }
 }

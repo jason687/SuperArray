@@ -23,12 +23,13 @@ public class Tester {
     System.out.println(arr.add("element 3"));
     System.out.println(arr.add("element 4"));
     System.out.println(arr.add("element 5"));
+    System.out.println(arr.toString());
     System.out.println(arr.add("element 6"));
     System.out.println(arr.add("element 7"));
     System.out.println(arr.add("element 8"));
     System.out.println(arr.add("element 9"));
     System.out.println();
-    System.out.println(arr.add("element 10"));
+//    System.out.println(arr.add("element 10"));
     System.out.println();
     System.out.println(arr.get(0));
     System.out.println(arr.get(1));
@@ -40,12 +41,17 @@ public class Tester {
     System.out.println(arr.get(7));
     System.out.println(arr.get(8));
     System.out.println(arr.get(9));
-    System.out.println(arr.get(10));
-    System.out.println(arr.get(11));
+//    System.out.println(arr.get(10));
     System.out.println();
 //
     System.out.println(arr.isEmpty());
 //
+    System.out.println(arr.toString());
+    System.out.println();
+//
+    System.out.println(arr.contains("hello"));
+    System.out.println(arr.contains("element 9"));
+    arr.add(3, "food");
     System.out.println(arr.toString());
   }
 }
