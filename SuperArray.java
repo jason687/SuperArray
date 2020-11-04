@@ -114,4 +114,13 @@ public class SuperArray {
       data[i] = null;
     }
   }
+
+  public String remove (int index) {
+    String delValue = data[index];
+    for (int i = index; i < data.length - 1; i++) {
+      data[i] = data[i + 1];
+    }
+    data[data.length - 1] = null;
+    return delValue;
+  }
 }

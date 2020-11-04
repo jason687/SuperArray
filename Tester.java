@@ -24,12 +24,11 @@ public class Tester {
     System.out.println(arr.add("element 4"));
     System.out.println(arr.add("element 5"));
     System.out.println(arr.toString());
+    arr.add(0, "new?");
     System.out.println(arr.add("element 6"));
     System.out.println(arr.add("element 7"));
     System.out.println(arr.add("element 8"));
     System.out.println(arr.add("element 9"));
-    System.out.println();
-//    System.out.println(arr.add("element 10"));
     System.out.println();
     System.out.println(arr.get(0));
     System.out.println(arr.get(1));
@@ -41,7 +40,7 @@ public class Tester {
     System.out.println(arr.get(7));
     System.out.println(arr.get(8));
     System.out.println(arr.get(9));
-//    System.out.println(arr.get(10));
+    System.out.println(arr.get(10));
     System.out.println();
 //
     System.out.println(arr.isEmpty());
@@ -53,8 +52,14 @@ public class Tester {
     System.out.println(arr.contains("element 9"));
     arr.add(3, "food");
     System.out.println(arr.toString());
+    System.out.println(arr.remove(1));
+    System.out.println(arr.toString());
+    System.out.println(arr.remove(4));
+    System.out.println(arr.toString());
+    System.out.println(arr.remove(9));
+    System.out.println(arr.toString());
     arr.clear();
-    System.out.println(arr.add("new?"));
+    System.out.println(arr.add("foo?"));
     System.out.println(arr.toString());
   }
 }
