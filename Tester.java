@@ -53,5 +53,8 @@ public class Tester {
     System.out.println(arr.contains("element 9"));
     arr.add(3, "food");
     System.out.println(arr.toString());
+    arr.clear();
+    System.out.println(arr.add("new?"));
+    System.out.println(arr.toString());
   }
 }
