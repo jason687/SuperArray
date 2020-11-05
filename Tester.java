@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Tester {
   public static void main (String [] args) {
     SuperArray arr = new SuperArray();
@@ -62,6 +64,11 @@ public class Tester {
     System.out.println(arr.indexOf("element 10"));
     arr.clear();
     System.out.println(arr.add("foo?"));
+    System.out.println(arr.toString());
+    String [] food = arr.toArray();
+    food[0] = "change";
+    String str = Arrays.toString(food);
+    System.out.println(str);
     System.out.println(arr.toString());
   }
 }
