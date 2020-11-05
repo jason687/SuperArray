@@ -80,7 +80,7 @@ public class SuperArray {
 
   public boolean contains (String s) {
     for (int i = 0; i < data.length; i++) {
-      if (data[i] != null) {
+      if ((data[i] != null) && (s != null)) {
         if (s.equals(data[i])) {
           return true;
         }
