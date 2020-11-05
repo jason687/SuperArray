@@ -58,6 +58,8 @@ public class Tester {
     System.out.println(arr.toString());
     System.out.println(arr.remove(9));
     System.out.println(arr.toString());
+    System.out.println(arr.indexOf("element 4"));
+    System.out.println(arr.indexOf("element 10"));
     arr.clear();
     System.out.println(arr.add("foo?"));
     System.out.println(arr.toString());

@@ -123,4 +123,18 @@ public class SuperArray {
     data[data.length - 1] = null;
     return delValue;
   }
+
+  public int indexOf (String s) {
+    int index = 0;
+    if (contains(s)) {
+      for (int i = 0; i < data.length; i++) {
+        if (s.equals(data[i])) {
+          return index;
+        } else {
+          index += 1;
+        }
+      }
+    }
+    return -1;
+  }
 }
