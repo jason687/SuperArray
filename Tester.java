@@ -70,5 +70,21 @@ public class Tester {
     String str = Arrays.toString(food);
     System.out.println(str);
     System.out.println(arr.toString());
+    System.out.println();
+
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("element 9"));
+    System.out.println(arr.toString());
+    SuperArray.removeDuplicates (arr);
+    System.out.println(arr.toString());
+    System.out.println();
+    SuperArray empty = new SuperArray (0);
+    System.out.println(empty.toString());
+    SuperArray.removeDuplicates (empty);
+    System.out.println(empty.toString());
   }
 }

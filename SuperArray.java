@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SuperArray {
   private String [] data;
   private int size;
@@ -107,12 +109,14 @@ public class SuperArray {
         complete = true;
       }
     }
+    size();
   }
 
   public void clear () {
     for (int i = 0; i < data.length; i++) {
       data[i] = null;
     }
+    size();
   }
 
   public String remove (int index) {
@@ -121,6 +125,7 @@ public class SuperArray {
       data[i] = data[i + 1];
     }
     data[data.length - 1] = null;
+    size();
     return delValue;
   }
 
@@ -145,5 +150,34 @@ public class SuperArray {
       arr[i] = data[i];
     }
     return arr;
+  }
+
+  public static void removeDuplicates (SuperArray s) {
+    boolean del = false;
+    String [] unique = new String [s.size()];
+    for (int i = 0; i < s.size(); i++) {
+      for (int j = 0; j <= s.size(); j++) {
+        if (j == s.size() && del == false) {
+          for (int k = 0; k < s.size(); k++) {
+            if (unique[k] == null) {
+              unique[k] = s.get(i);
+              k = s.size();
+            }
+          }
+          j += 1;
+        } else {
+          if (j == s.size()) {
+            j += 1;
+          }
+        }
+        if (j < s.size() && !(s.get(i) == null || unique[j] == null)) {
+          if (s.get(i).equals(unique[j])) {
+            s.remove(i);
+            del = true;
+            i -= 1;
+          }
+        }
+      }
+    }
   }
 }
