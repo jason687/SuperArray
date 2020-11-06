@@ -78,6 +78,12 @@ public class Tester {
     System.out.println(arr.add("element 9"));
     System.out.println(arr.add("element 9"));
     System.out.println(arr.add("element 9"));
+    System.out.println(arr.add("foo?"));
+    System.out.println(arr.add("foo"));
+    System.out.println(arr.add("foo?"));
+    System.out.println(arr.add("foo?"));
+    System.out.println(arr.add("foo?"));
+    System.out.println(arr.add("foo"));
     System.out.println(arr.toString());
     SuperArray.removeDuplicates (arr);
     System.out.println(arr.toString());

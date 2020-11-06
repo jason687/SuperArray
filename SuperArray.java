@@ -154,10 +154,11 @@ public class SuperArray {
 
   public static void removeDuplicates (SuperArray s) {
     boolean del = false;
+    boolean tempDel = false;
     String [] unique = new String [s.size()];
     for (int i = 0; i < s.size(); i++) {
       for (int j = 0; j <= s.size(); j++) {
-        if (j == s.size() && del == false) {
+        if (j == s.size() && (del == false)) {
           for (int k = 0; k < s.size(); k++) {
             if (unique[k] == null) {
               unique[k] = s.get(i);
@@ -172,12 +173,16 @@ public class SuperArray {
         }
         if (j < s.size() && !(s.get(i) == null || unique[j] == null)) {
           if (s.get(i).equals(unique[j])) {
+            System.out.println(s.toString());
             s.remove(i);
             del = true;
             i -= 1;
+            j = s.size() + 1;
           }
         }
       }
+      del = false;
     }
+    System.out.println(Arrays.toString(unique));
   }
 }
