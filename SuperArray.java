@@ -151,4 +151,15 @@ public class SuperArray {
     }
     return arr;
   }
+
+  public int lastIndexOf (String value) {
+    for (int i = size() - 1; i > -1; i--) {
+      if (get(i) != null) {
+        if (get(i).equals(value)) {
+          return i;
+        }
+      }
+    }
+    return -1;
+  }
 }

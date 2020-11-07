@@ -78,19 +78,24 @@ public class Tester {
     System.out.println(arr.add("element 9"));
     System.out.println(arr.add("element 9"));
     System.out.println(arr.add("element 9"));
-    System.out.println(arr.add("foo?"));
-    System.out.println(arr.add("foo"));
-    System.out.println(arr.add("foo?"));
-    System.out.println(arr.add("foo?"));
-    System.out.println(arr.add("foo?"));
-    System.out.println(arr.add("foo"));
     System.out.println(arr.toString());
-    SuperArray.removeDuplicates (arr);
-    System.out.println(arr.toString());
+    System.out.println(arr.lastIndexOf("element 9"));
+    System.out.println(arr.lastIndexOf("foo?"));
+    System.out.println(arr.lastIndexOf("elemen9"));
+    // System.out.println(arr.add("foo?"));
+    // System.out.println(arr.add("foo"));
+    // System.out.println(arr.add("foo?"));
+    // System.out.println(arr.add("foo?"));
+    // System.out.println(arr.add("foo?"));
+    // System.out.println(arr.add("foo"));
+    // System.out.println(arr.toString());
+    // SuperArray.removeDuplicates (arr);
+    // System.out.println(arr.toString());
+    // System.out.println();
+    // SuperArray empty = new SuperArray (0);
+    // System.out.println(empty.toString());
+    // SuperArray.removeDuplicates (empty);
+    // System.out.println(empty.toString());
     System.out.println();
-    SuperArray empty = new SuperArray (0);
-    System.out.println(empty.toString());
-    SuperArray.removeDuplicates (empty);
-    System.out.println(empty.toString());
   }
 }
