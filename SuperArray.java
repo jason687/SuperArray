@@ -168,25 +168,23 @@ public class SuperArray {
       return false;
     }
     for (int i = 0; i < Math.min(size(), other.size()); i++) {
-      for (int j = 0; j < Math.min(size(), other.size()); j++) {
-        if (data[i] != null && other.get(j) != null) {
-          if (!(data[i].equals(other.get(j)))) {
-            return false;
-          }
-        } else {
-          if ((data[i] == null && other.get(i) != null) || (data[i] != null && other.get(i) == null)) {
-            return false;
-          }
+      if (data[i] != null && other.get(i) != null) {
+        if (!(data[i].equals(other.get(i)))) {
+          return false;
+        }
+      } else {
+        if ((data[i] == null && other.get(i) != null) || (data[i] != null && other.get(i) == null)) {
+          return false;
         }
       }
     }
     for (int i = Math.min(data.length, other.data.length); i < Math.max(data.length, other.data.length); i++) {
-      if (Math.max(data.length, other.data.length) == data.length) {
+      if (Math.max(data.length, other.data.length) == data.length && data.length != other.data.length) {
         if (data[i] != null) {
           return false;
         }
       } else {
-        if (other.get(i) != null) {
+        if (other.get(i) != null && data.length != other.data.length) {
           return false;
         }
       }
