@@ -97,5 +97,20 @@ public class Tester {
     // SuperArray.removeDuplicates (empty);
     // System.out.println(empty.toString());
     System.out.println();
+
+    SuperArray a = new SuperArray();
+    SuperArray b = new SuperArray();
+    SuperArray c = new SuperArray();
+    System.out.println(a.add("element 9"));
+    System.out.println(a.add("element 9"));
+    System.out.println(b.add("element 9"));
+    b.add(2, "element 9");
+    System.out.println(c.add("element 9"));
+    System.out.println(c.add("element 9"));
+    System.out.println();
+    System.out.println(a.equals(c));
+    System.out.println(a.equals(b));
+    System.out.println(c.equals(b));
+
   }
 }
