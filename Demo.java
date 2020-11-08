@@ -47,6 +47,24 @@ public class Demo {
     return overlap;
   }
 
+  public static SuperArray zip (SuperArray a, SuperArray b) {
+    SuperArray zipper = new SuperArray ();
+    for (int i = 0; i < Math.min(a.size(), b.size()); i++) {
+      zipper.add(a.get(i));
+      zipper.add(b.get(i));
+    }
+    for (int i = Math.min(a.size(), b.size()); i < Math.max(a.size(), b.size()); i++) {
+      if (Math.max(a.size(), b.size()) == a.size() && a.size() != b.size()) {
+        zipper.add(a.get(i));
+      } else {
+        if (Math.max(a.size(), b.size()) == b.size() && a.size() != b.size()) {
+          zipper.add(b.get(i));
+        }
+      }
+    }
+    return zipper;
+  }
+
   public static void main (String [] args) {
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -73,5 +91,17 @@ public class Demo {
     b.add("9");
     SuperArray overlap = findOverlap(a, b);
     System.out.println(overlap);
+    a.clear();
+    b.clear();
+    System.out.println(b.add("a"));
+    System.out.println(b.add("b"));
+    System.out.println(b.add("c"));
+    System.out.println(a.add("0"));
+    System.out.println(a.add("1"));
+    System.out.println(a.add("2"));
+    System.out.println(a.add("3"));
+    System.out.println(a.add("4"));
+    System.out.println();
+    System.out.println(zip(a, b));
   }
 }
