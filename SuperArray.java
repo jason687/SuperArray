@@ -101,6 +101,9 @@ public class SuperArray {
   }
 
   public void add (int index, String element) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException ("Index is out of bounds (index = " + index + ")");
+    }
     String temp1 = "";
     String temp2 = element;
     boolean complete = false;
@@ -129,6 +132,9 @@ public class SuperArray {
   }
 
   public String remove (int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException ("Index is out of bounds (index = " + index + ")");
+    }
     String delValue = data[index];
     for (int i = index; i < data.length - 1; i++) {
       data[i] = data[i + 1];
